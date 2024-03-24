@@ -1,24 +1,24 @@
-# README
+# yowayowa-ios-mdm
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project setup
+```
+npm install
+```
 
-Things you may want to cover:
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-* Ruby version
+### Compiles and minifies for production
+```
+npm run build
+```
 
-* System dependencies
+### Lints and fixes files
+```
+npm run lint
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
