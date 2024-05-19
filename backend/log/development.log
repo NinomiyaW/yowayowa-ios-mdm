@@ -1,0 +1,510 @@
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for 192.168.65.1 at 2024-05-02 15:14:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.7.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.7.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.9ms | Allocations: 537)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 4505)
+
+
+Started GET "/favicon.ico" for 192.168.65.1 at 2024-05-02 15:14:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateDevices (20240502063145)
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `devices` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `device_name` varchar(255), `device_information` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240502063145')[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-05-02 06:32:31.301549', '2024-05-02 06:32:31.301549')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.5ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device1', 'device1の情報', '2024-05-02 06:41:05.823205', '2024-05-02 06:41:05.823205')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device2', 'device2の情報', '2024-05-02 06:41:05.828784', '2024-05-02 06:41:05.828784')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device3', 'device3の情報', '2024-05-02 06:41:05.832285', '2024-05-02 06:41:05.832285')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device4', 'device4の情報', '2024-05-02 06:41:05.835368', '2024-05-02 06:41:05.835368')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device5', 'device5の情報', '2024-05-02 06:41:05.837659', '2024-05-02 06:41:05.837659')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-02 15:41:26 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 0 pending migration:
+
+
+
+):
+  
+activerecord (6.1.7.7) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.7) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.7) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.7.7) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.7.7) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 192.168.65.1 at 2024-05-02 15:42:03 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 0 pending migration:
+
+
+
+):
+  
+activerecord (6.1.7.7) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.7) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.7) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7.7) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 192.168.65.1 at 2024-05-02 15:42:05 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 192.168.65.1 at 2024-05-02 15:42:06 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.7.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.7.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.7ms | Allocations: 210)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 1607)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-02 15:42:16 +0900
+Processing by Api::V1::DevicesController#index as */*
+  [1m[36mDevice Load (0.3ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 2.2ms | Allocations: 4673)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-02 18:22:57 +0900
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (4.3ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 28ms (Views: 5.3ms | ActiveRecord: 8.6ms | Allocations: 8446)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-02 18:22:58 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"aaa", "device"=>{"device_name"=>"aaa"}}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 707)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-02 18:24:13 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (3.6ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 3.6ms | Allocations: 1159)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-02 18:24:16 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"a", "device"=>{"device_name"=>"a"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-02 18:25:30 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (2.4ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 2.4ms | Allocations: 1147)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-02 18:26:14 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (4.1ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 4.1ms | Allocations: 1149)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-07 09:57:14 +0900
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (0.8ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 3.1ms | Allocations: 7626)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-07 09:57:17 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"aa", "device"=>{"device_name"=>"aa"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 707)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-07 10:04:15 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (1.4ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 2.6ms | Allocations: 1300)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-07 10:04:23 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"aa", "device"=>{"device_name"=>"aa"}}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+  [1m[36mDevice Load (1.3ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-07 10:59:00 +0900
+Processing by Api::V1::DevicesController#index as */*
+  [1m[36mDevice Load (1.9ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 3.9ms | Allocations: 1273)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-07 11:00:26 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (2.6ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 2.6ms | Allocations: 1145)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-07 11:00:32 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"aa", "device_information"=>"aa", "device"=>{"device_name"=>"aa", "device_information"=>"aa"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mDevice Create (7.3ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('aa', 'aa', '2024-05-07 02:00:32.866923', '2024-05-07 02:00:32.866923')[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 13.3ms | Allocations: 2371)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-07 11:00:39 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"aa", "device_information"=>"aa", "device"=>{"device_name"=>"aa", "device_information"=>"aa"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mDevice Create (0.9ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('aa', 'aa', '2024-05-07 02:00:39.599203', '2024-05-07 02:00:39.599203')[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 5.3ms | Allocations: 1956)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 15:54:06 +0900
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (2.0ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 23ms (Views: 10.7ms | ActiveRecord: 5.2ms | Allocations: 7804)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-19 15:54:16 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"aa", "device_information"=>"aa", "device"=>{"device_name"=>"aa", "device_information"=>"aa"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mDevice Create (2.4ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('aa', 'aa', '2024-05-19 06:54:16.575543', '2024-05-19 06:54:16.575543')[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 5.9ms | Allocations: 2746)
+
+
+  [1m[36mDevice Load (2.4ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+Started GET "/devices" for 192.168.65.1 at 2024-05-19 16:07:26 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/devices"):
+  
+Started GET "/devices" for 192.168.65.1 at 2024-05-19 16:08:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/devices"):
+  
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:08:48 +0900
+Processing by Api::V1::DevicesController#index as */*
+  [1m[36mDevice Load (2.1ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 3.8ms | Allocations: 1568)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:10:14 +0900
+Processing by Api::V1::DevicesController#index as */*
+  [1m[36mDevice Load (2.2ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 8.3ms | Allocations: 5409)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:10:28 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (1.8ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.8ms | Allocations: 1426)
+
+
+Started DELETE "/api/v1/devices/6" for 192.168.65.1 at 2024-05-19 16:10:33 +0900
+Processing by Api::V1::DevicesController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDevice Load (0.7ms)[0m  [1m[34mSELECT `devices`.* FROM `devices` WHERE `devices`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:16:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+  [1m[36mDevice Destroy (2.1ms)[0m  [1m[31mDELETE FROM `devices` WHERE `devices`.`id` = 6[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 7.0ms | Allocations: 3247)
+
+
+Started DELETE "/api/v1/devices/7" for 192.168.65.1 at 2024-05-19 16:10:34 +0900
+Processing by Api::V1::DevicesController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDevice Load (0.4ms)[0m  [1m[34mSELECT `devices`.* FROM `devices` WHERE `devices`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:16:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+  [1m[36mDevice Destroy (0.8ms)[0m  [1m[31mDELETE FROM `devices` WHERE `devices`.`id` = 7[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 2061)
+
+
+Started DELETE "/api/v1/devices/8" for 192.168.65.1 at 2024-05-19 16:10:35 +0900
+Processing by Api::V1::DevicesController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDevice Load (0.5ms)[0m  [1m[34mSELECT `devices`.* FROM `devices` WHERE `devices`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:16:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+  [1m[36mDevice Destroy (0.7ms)[0m  [1m[31mDELETE FROM `devices` WHERE `devices`.`id` = 8[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:17:in `destroy'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 2027)
+
+
+Started POST "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:10:43 +0900
+Processing by Api::V1::DevicesController#create as HTML
+  Parameters: {"device_name"=>"testmuftah", "device_information"=>"uhehehe", "device"=>{"device_name"=>"testmuftah", "device_information"=>"uhehehe"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mDevice Create (1.1ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('testmuftah', 'uhehehe', '2024-05-19 07:10:43.009373', '2024-05-19 07:10:43.009373')[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:8:in `create'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 2173)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:10:49 +0900
+Processing by Api::V1::DevicesController#index as */*
+  [1m[36mDevice Load (4.5ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 4.5ms | Allocations: 1243)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:15:10 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (5.0ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 5.0ms | Allocations: 1234)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:15:15 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (0.8ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 1234)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:15:46 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (1.9ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.9ms | Allocations: 1234)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:16:28 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (0.3ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1236)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:17:16 +0900
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (2.4ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 2.4ms | Allocations: 1234)
+
+
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:53:09 +0900
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20240502063145_create_devices.rb
+
+
+):
+  
+activerecord (6.1.7.7) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.7) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.7) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7.7) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mDevice Load (5.5ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  [1m[36mDevice Load (1.9ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateDevices (20240502063145)
+  [1m[35m (81.8ms)[0m  [1m[35mCREATE TABLE `devices` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `device_name` varchar(255), `device_information` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240502063145')[0m
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device1', 'device1の情報', '2024-05-19 07:55:42.864417', '2024-05-19 07:55:42.864417')[0m
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.8ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device2', 'device2の情報', '2024-05-19 07:55:42.887301', '2024-05-19 07:55:42.887301')[0m
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.3ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device3', 'device3の情報', '2024-05-19 07:55:42.900075', '2024-05-19 07:55:42.900075')[0m
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device4', 'device4の情報', '2024-05-19 07:55:42.910050', '2024-05-19 07:55:42.910050')[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDevice Create (2.3ms)[0m  [1m[32mINSERT INTO `devices` (`device_name`, `device_information`, `created_at`, `updated_at`) VALUES ('device5', 'device5の情報', '2024-05-19 07:55:42.915191', '2024-05-19 07:55:42.915191')[0m
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDevice Load (1.2ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+Started GET "/api/v1/devices" for 192.168.65.1 at 2024-05-19 16:55:57 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::DevicesController#index as HTML
+  [1m[36mDevice Load (0.4ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:3:in `index'
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 1.9ms | Allocations: 5547)
+
+
